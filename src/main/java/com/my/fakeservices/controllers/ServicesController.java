@@ -16,14 +16,15 @@ import com.my.fakeservices.repository.UserRepository;
 import com.my.fakeservices.requests.SignupForm;
 
 @RestController
-@RequestMapping("/api/")
+@RequestMapping("/api")
 public class ServicesController {
 
 	@Autowired
 	private UserRepository userRepository;
 
-	@GetMapping("/")
+	@GetMapping("/home")
 	public String home() {
+		System.out.println("welcome");
 		return "Welcome";
 	}
 
