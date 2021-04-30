@@ -1,11 +1,8 @@
 package com.my.fakeservices.requests;
 
 
-import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-
-import org.springframework.web.multipart.MultipartFile;
 
 public class SignupForm {
 
@@ -25,9 +22,6 @@ public class SignupForm {
 	@NotBlank
 	private String mobile;
 	
-	@Transient
-	private MultipartFile file;
-
 	public String getFirstName() {
 		return firstName;
 	}
@@ -67,17 +61,4 @@ public class SignupForm {
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
-
-	public MultipartFile getFile() {
-		return file;
-	}
-
-	public void setFile(MultipartFile file) {
-		this.file = file;
-	}
-	
-	
-	
-	
-
 }
